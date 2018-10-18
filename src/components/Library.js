@@ -1,26 +1,10 @@
-import React, { Component } from 'react';
-import albumData from './../data/albums';
+import React from 'react';
 
-class Library extends Component {
-  constructor(props){
-    super(props);
-    this.state = {albums: albumData};
-  }
-
-  render() {
-    return (
-      <section className="library">
-        {
-          this.state.albums.map((album, index) =>
-          <div key={index}>
-            {album.title}
-          </div>
-        )
-        }
-      </section>
-    );
-  }
-}
+const Library = () => (
+  <section className="library">
+    Library will go here
+  </section>
+);
 
 
 export default Library;
