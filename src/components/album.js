@@ -6,5 +6,4 @@ const Album = () => (
   </section>
 );
 
-
 export default Album;
