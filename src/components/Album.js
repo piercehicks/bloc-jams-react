@@ -36,7 +36,6 @@ import { Link } from 'react-router-dom'; //added for assignment
           {
             this.state.album.songs.map((album, index)=>
             <Link to={`/album/${album.slug}`} key={index}>
-            <tr>{album.songs}</tr>
             <tr>{album.title}</tr>
             <tr>{album.duration}</tr>
             </Link>
