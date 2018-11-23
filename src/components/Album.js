@@ -33,14 +33,16 @@ import { Link } from 'react-router-dom'; //added for assignment
             <col id="song-duration-column" />
             </colgroup>
             <tbody>
-          {
-            this.state.album.songs.map((album, index)=>
-            <Link to={`/album/${album.slug}`} key={index}>
-            <tr>{album.title}</tr>
-            <tr>{album.duration}</tr>
-            </Link>
-          )
-          }
+            {
+              this.state.album.songs.map((album, index) =>
+              <Link to={`/album/${album.slug}`} key={index}>
+              <tr>{album.songNum}</tr>
+              <tr>{album.title}</tr>
+              <tr>{album.duration}</tr>
+              </Link>
+              )
+            }
+
           </tbody>
             </table>
           </section>
