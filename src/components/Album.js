@@ -11,9 +11,29 @@ import { Link } from 'react-router-dom'; //added for assignment
      });
 
      this.state = {
-       album: album
+       album: album,
+       currentSong: album.songs[0],
+       isPlaying: false
      };
+
+     this.audioElement = document.createElement('audio');
+     this.audioElement.src = album.songs[0].audioSrc;
    }
+
+   play() {
+     this.audioElement.play();
+     this.setState({isPlaying: true});
+   }
+
+   pause(){
+     this.audioElement.pause();
+     this.setState({isPlaying: false});
+   }
+
+setSong(song) {
+  this.audioElement.src = song.audioSrc;
+  this.setState({currentSong: song});
+}
 
    render() {
      return(
@@ -34,14 +54,17 @@ import { Link } from 'react-router-dom'; //added for assignment
             </colgroup>
             <tbody>
             {
-              this.state.album.songs.map((album, index) =>
-              <Link to={`/album/${album.slug}`} >
-              <tr>{album.songNum}</tr>
-              <tr>{album.title}</tr>
-              <tr>{album.duration}</tr>
-              </Link>
-              )
-            }
+                          this.state.album.songs.map((album, index) =>
+
+                          <tr key={index}>
+                          <td>{album.songNum}</td>
+                          <td>{album.title}</td>
+                          <td>{album.duration}</td>
+                          </tr>
+
+                          )
+                        }
+
 
           </tbody>
             </table>
