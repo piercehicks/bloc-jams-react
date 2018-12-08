@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'; //added for assignment
+import { Link } from 'react-router-dom';
  import albumData from './../data/albums';
 
  class Album extends Component {
@@ -65,16 +65,22 @@ handleSongClick(song) {
             <tbody>
             {
               this.state.album.songs.map((song, index) =>
-                          <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                          <td>{song.songNum}</td>
-                          <td>{song.title}</td>
-                          <td>{song.duration}</td>
-                          </tr>
 
-                          )
-                        }
-
-
+                <tr className="song" key={index}
+                   onClick={() => this.handleSongClick(song)}
+                   onMouseEnter={() => this.setState({isHovered: index+1})}
+                   onMouseLeave={() => this.setState({isHovered: false})}>
+                   <td>
+                    { (this.state.currentSong.title === song.title) ?
+                      <span className={this.state.isPlaying ? "ion-pause" : "ion-play"}></span> :(this.state.isHovered === index+1) ?
+                      <span className="ion-play"></span>:
+                      <span>{index+1}</span>
+                    }
+                    </td>
+                    <td>{song.title}</td>
+                    <td>{song.duration}</td>
+                  </tr>
+                          )}
           </tbody>
             </table>
           </section>
