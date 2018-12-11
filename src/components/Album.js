@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
+playbar-assignment-nxtbtn
 import PlayerBar from './PlayerBar';
+
+master
 
  class Album extends Component {
    constructor(props){
@@ -84,7 +87,6 @@ handleNextClick(){
             <tbody>
             {
               this.state.album.songs.map((song, index) =>
-
                 <tr className="song" key={index}
                    onClick={() => this.handleSongClick(song)}
                    onMouseEnter={() => this.setState({isHovered: index+1})}
