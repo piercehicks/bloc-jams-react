@@ -4,7 +4,7 @@ class PlayerBar extends Component {
   render(){
     return (
     <section className="player-bar">
-playbar-assignment-nxtbtn
+
     <section id="buttons">
          <button id="previous" onClick={this.props.handlePrevClick}>
            <span className="ion-skip-backward"></span>
@@ -29,12 +29,10 @@ playbar-assignment-nxtbtn
          </section>
 
 
-master
+
     </section>
   );
   }
 }
- playbar-assignment-nxtbtn
-export default PlayerBar
 
-master
+export default PlayerBar;

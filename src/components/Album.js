@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
-playbar-assignment-nxtbtn
 import PlayerBar from './PlayerBar';
 
-master
-
- class Album extends Component {
+class Album extends Component {
    constructor(props){
      super(props);
 
