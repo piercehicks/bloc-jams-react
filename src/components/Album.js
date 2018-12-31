@@ -99,6 +99,17 @@ handleNextClick(){
      this.setState({ volume: newVolume });
    }
 
+   formatTime(time) {
+     if (isNaN(time)) {
+     return "-:--";
+   }
+   let min = Math.floor(time / 60);
+   let sec = Math.round(time % 60);
+   sec = sec < 10 ? "0" + sec : sec.toString();
+   return `${min}:${sec}`;
+    }
+
+
    render() {
      return(
        <section className="album">
@@ -131,7 +142,7 @@ handleNextClick(){
                     }
                     </td>
                     <td>{song.title}</td>
-                    <td>{song.duration}</td>
+                    <td>{this.formatTime(song.duration)}</td>
                   </tr>
                           )}
           </tbody>
@@ -147,6 +158,7 @@ handleNextClick(){
             handleNextClick={() => this.handleNextClick()}
             handleTimeChange={(e) => this.handleTimeChange(e)}
             handleVolumeChange={(e) => this.handleVolumeChange(e)}
+            formatTime={(time) => this.formatTime(time)}
             />
           </section>
      );
