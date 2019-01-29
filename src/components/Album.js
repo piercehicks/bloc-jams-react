@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 
@@ -128,6 +129,7 @@ handleNextClick(){
             <col id="song-duration-column" />
             </colgroup>
             <tbody>
+            <div className="display-4">
             {
               this.state.album.songs.map((song, index) =>
                 <tr className="song" key={index}
@@ -145,6 +147,7 @@ handleNextClick(){
                     <td>{this.formatTime(song.duration)}</td>
                   </tr>
                           )}
+                </div>
           </tbody>
             </table>
             <PlayerBar
