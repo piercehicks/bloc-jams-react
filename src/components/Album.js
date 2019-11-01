@@ -130,6 +130,7 @@ handleNextClick(){
             </colgroup>
             <tbody>
             <div className="display-4">
+
             {
               this.state.album.songs.map((song, index) =>
                 <tr className="song" key={index}
