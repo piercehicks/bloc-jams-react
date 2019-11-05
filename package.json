@@ -25,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@iconify/icons-ion": "^1.0.7",
+    "@iconify/react": "^1.1.1"
+  }
 }
