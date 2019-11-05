@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
-import iosSkipBackward from '@iconify/icons-ion/ios-skip-backward';
+
 
 class PlayerBar extends Component {
   render(){
@@ -10,7 +9,6 @@ class PlayerBar extends Component {
     <section id="buttons">
          <button id="previous" onClick={this.props.handlePrevClick}>
            <span className="ion-skip-backward"></span>
-           <Icon icon={iosSkipBackward} />
          </button>
          <button id="play-pause" onClick={this.props.handleSongClick}>
            <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
