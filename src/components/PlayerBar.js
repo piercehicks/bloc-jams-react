@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Backward from '../img/backward.svg';
 import Forward from '../img/forward.svg';
-import Pause from '../img/pause.svg';
-import Play from '../img/play.svg';
+import Pause from '../img/icons8-pause-24.png';
+import Play from '../img/icons8-play-24.png';
 import VolumeHigh from '../img/icons8-voice-24.png';
 import VolumeOff from '../img/icons8-mute-24.png';
 
