@@ -1,4 +1,11 @@
 import React, {Component} from 'react';
+import Backward from '../img/backward.svg';
+import Forward from '../img/forward.svg';
+import Pause from '../img/pause.svg';
+import Play from '../img/play.svg';
+import VolumeHigh from '../img/icons8-voice-24.png';
+import VolumeOff from '../img/icons8-mute-24.png';
+
 
 
 class PlayerBar extends Component {
@@ -7,14 +14,25 @@ class PlayerBar extends Component {
     <section className="player-bar">
     <section id="buttons">
          <button id="previous" onClick={this.props.handlePrevClick}>
-           <span className="ion-skip-backward"></span>
+           <div className="ion-skip-backward">
+            <img src={Backward} alt="Backward arrow" />
+           </div>
          </button>
          <button id="play-pause" onClick={this.props.handleSongClick}>
-           <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
+           <span className={this.props.isPlaying
+              ?
+               <img src={Pause} alt="Pause sign" />
+              :
+              <img src={Play} alt="Play sign" />
+
+            }>
+          </span>
 
          </button>
          <button id="next" onClick={this.props.handleNextClick}>
-           <span className="ion-skip-forward"></span>
+           <span className="ion-skip-forward">
+            <img src={Forward} alt="Forward arrow" />
+           </span>
          </button>
        </section>
        <section id="time-control">
@@ -31,7 +49,9 @@ class PlayerBar extends Component {
          <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
        </section>
        <section id="volume-control">
-         <div className="icon ion-volume-low"></div>
+         <div className="icon ion-volume-low">
+          <img src={VolumeOff} alt="VolumeOff sign" />
+         </div>
          <input
           type="range"
           className="seek-bar"
@@ -41,7 +61,9 @@ class PlayerBar extends Component {
           step='0.01'
           onChange={this.props.handleVolumeChange}
            />
-         <div className="icon ion-volume-high"></div>
+         <div className="icon ion-volume-high">
+          <img src={VolumeHigh} alt="VolumeHigh sign" />
+         </div>
          </section>
 
 
