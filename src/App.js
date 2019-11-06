@@ -6,6 +6,12 @@ import Library from './components/Library';
 import Album from './components/Album';
 import Logo from './img/bloc_jams_logo.png';
 
+import Backward from '../img/backward.svg';
+import Forward from '../img/forward.svg';
+import Pause from '../img/pause.svg';
+import Play from '../img/play.svg';
+import VolumeHigh from '../img/icons8-voice-24.png';
+import VolumeOff from '../img/icons8-mute-24.png';
 
 
 
