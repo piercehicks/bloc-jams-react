@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import Backward from '../img/backward.svg';
-import Forward from '../img/forward.svg';
-import Pause from '../img/icons8-pause-24.png';
-import Play from '../img/icons8-play-24.png';
 import VolumeHigh from '../img/icons8-voice-24.png';
 import VolumeOff from '../img/icons8-mute-24.png';
 
 
 
+
+
 class PlayerBar extends Component {
+
   render(){
+
     return (
     <section className="player-bar">
     <section id="buttons">
-         <button id="previous" onClick={this.props.handlePrevClick}>
-           <h6>Previous <img src={VolumeOff} alt="VolumeOff sign" /></h6>
+         <button variant="contained" color="secondary" id="previous" onClick={this.props.handlePrevClick}>
+           <h6>Previous</h6>
          </button>
 
          <button id="next" onClick={this.props.handleNextClick}>
@@ -51,8 +51,6 @@ class PlayerBar extends Component {
           <img src={VolumeHigh} alt="VolumeHigh sign" />
          </div>
          </section>
-
-
 
     </section>
   );
