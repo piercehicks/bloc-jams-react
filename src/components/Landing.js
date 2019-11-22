@@ -2,10 +2,12 @@ import React from 'react';
 import '../App.css';
 
 
+
 const Landing = () => (
   <section className="landing">
 
-  <h1 className="hero-content"><div className="hero-title">Turn the music up!</div></h1>
+  <h1 className="hero-content"><div className="hero-title">Turn the music up!</div>
+  </h1>
 
   <section className="selling-points">
     <div className="point">
