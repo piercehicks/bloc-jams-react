@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import VolumeHigh from '../img/icons8-voice-24.png';
-import VolumeOff from '../img/icons8-mute-24.png';
+import '../App.css';
+import VolumeHigh from '../img/icons8-speaker-24c.png';
+import VolumeOff from '../img/icons8-mute-24c.png';
 
 
 
@@ -13,12 +14,12 @@ class PlayerBar extends Component {
     return (
     <section className="player-bar">
     <section id="buttons">
-         <button variant="contained" color="secondary" id="previous" onClick={this.props.handlePrevClick}>
+         <button variant="contained" color="secondary" id="previous" class="button-2" onClick={this.props.handlePrevClick}>
            <h6>Previous</h6>
          </button>
 
-         <button id="next" onClick={this.props.handleNextClick}>
-           <h6>Forward</h6>
+         <button id="next" class="button-2" onClick={this.props.handleNextClick}>
+           <h6>Next</h6>
          </button>
        </section>
        <section id="time-control">
