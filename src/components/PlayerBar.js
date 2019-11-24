@@ -1,38 +1,25 @@
 import React, {Component} from 'react';
-import Backward from '../img/backward.svg';
-import Forward from '../img/forward.svg';
-import Pause from '../img/pause.svg';
-import Play from '../img/play.svg';
-import VolumeHigh from '../img/icons8-voice-24.png';
-import VolumeOff from '../img/icons8-mute-24.png';
+import '../App.css';
+import VolumeHigh from '../img/icons8-speaker-24c.png';
+import VolumeOff from '../img/icons8-mute-24c.png';
+
+
 
 
 
 class PlayerBar extends Component {
+
   render(){
+
     return (
     <section className="player-bar">
     <section id="buttons">
-         <button id="previous" onClick={this.props.handlePrevClick}>
-           <div className="ion-skip-backward">
-            <img src={Backward} alt="Backward arrow" />
-           </div>
+         <button variant="contained" color="secondary" id="previous" class="button-2" onClick={this.props.handlePrevClick}>
+           <h6>Previous</h6>
          </button>
-         <button id="play-pause" onClick={this.props.handleSongClick}>
-           <span className={this.props.isPlaying
-              ?
-               <img src={Pause} alt="Pause sign" />
-              :
-              <img src={Play} alt="Play sign" />
 
-            }>
-          </span>
-
-         </button>
-         <button id="next" onClick={this.props.handleNextClick}>
-           <span className="ion-skip-forward">
-            <img src={Forward} alt="Forward arrow" />
-           </span>
+         <button id="next" class="button-2" onClick={this.props.handleNextClick}>
+           <h6>Next</h6>
          </button>
        </section>
        <section id="time-control">
@@ -49,7 +36,7 @@ class PlayerBar extends Component {
          <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
        </section>
        <section id="volume-control">
-         <div className="icon ion-volume-low">
+         <div>
           <img src={VolumeOff} alt="VolumeOff sign" />
          </div>
          <input
@@ -61,12 +48,10 @@ class PlayerBar extends Component {
           step='0.01'
           onChange={this.props.handleVolumeChange}
            />
-         <div className="icon ion-volume-high">
+         <div>
           <img src={VolumeHigh} alt="VolumeHigh sign" />
          </div>
          </section>
-
-
 
     </section>
   );

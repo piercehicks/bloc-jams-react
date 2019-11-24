@@ -4,6 +4,8 @@ import '../App.css';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 
+
+
 class Album extends Component {
    constructor(props){
      super(props);
@@ -122,7 +124,7 @@ handleNextClick(){
           <div id="release-info">{this.state.album.releaseInfo}</div>
           </div>
           </section>
-          <table id="song-list">
+          <table align="center" id="song-list">
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />

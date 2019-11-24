@@ -9,7 +9,6 @@ import Logo from './img/bloc_jams_logo.png';
 
 
 
-
 class App extends Component {
   render() {
     return (
