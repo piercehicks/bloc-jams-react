@@ -26,11 +26,6 @@ background-image: url("img/blur_bg_3.jpg");
   background-size: cover;
 }
 
-.display-4 {
-  display: block;
-  padding-left: 350px;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -97,4 +92,11 @@ background-image: url("img/blur_bg_3.jpg");
 .button-2:hover {
   background-position: 100%;
   color: #EF397B;
+}
+
+/* Landing */
+
+/* mouse over link */
+.library-link-style {
+  color: white;
 }

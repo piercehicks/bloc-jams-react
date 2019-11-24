@@ -124,7 +124,7 @@ handleNextClick(){
           <div id="release-info">{this.state.album.releaseInfo}</div>
           </div>
           </section>
-          <table id="song-list">
+          <table align="center" id="song-list">
           <colgroup>
             <col id="song-number-column" />
             <col id="song-title-column" />
